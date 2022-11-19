@@ -1,6 +1,6 @@
 # ModSecurity with Kong
 
-This repository has as objective to teach how to install, configure, handle false positives and test your application.
+This repository has as objective to teach how to install, configure, handle false positives and test the security of your application.
 
 ## Step 01 - Installation and activation
 
