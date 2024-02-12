@@ -68,8 +68,8 @@ SecRuleEngine On
 
 # The default debug log configuration is to duplicate the error, warning
 # and notice messages from the error log.
-SecDebugLog /var/log/modsec/debug.log
-SecDebugLogLevel 3
+#SecDebugLog /var/log/modsec/debug.log
+#SecDebugLogLevel 3
 
 # -- Audit log configuration -------------------------------------------------
 
@@ -79,7 +79,7 @@ SecDebugLogLevel 3
 #
 #SecAuditEngine On
 SecAuditEngine RelevantOnly
-SecAuditLogRelevantStatus "^2-5"
+SecAuditLogRelevantStatus "^(?:5|4(?!04))"
 
 # Log everything we know about a transaction.
 # Log only Audit Log Header; Audit log trailer, which contains additional data; Compact request body alternative (to part C), which excludes files
@@ -88,8 +88,8 @@ SecAuditLogParts AIHZ
 # Use a single file for logging. This is much easier to look at, but
 # assumes that you will use the audit log only ocassionally.
 #SecAuditLogType Concurrent
-SecAuditLogType Serial
-SecAuditLog /var/log/modsec/modsec_audit.log
+#SecAuditLogType Serial
+#SecAuditLog /var/log/modsec/modsec_audit.log
 
 # Specify the path for concurrent audit logging.
 #SecAuditLogStorageDir /var/log/modsec
